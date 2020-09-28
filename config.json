@@ -1,0 +1,42 @@
+{
+    "RazonSocial": {
+        "Literal": "(Razón Social:)",
+        "ExpR": "(.+)(N)"
+    },
+    "CodigoCuentaCotizacion": {
+        "Literal": "(Código de Cuenta de Cotización:)",
+        "ExpR": "(\\s+\\d+\\s+?\\d+)"
+    },
+    "PeriodoLiq": {
+        "Literal": "(Período de Liquidación:)",
+        "ExpR": "(\\s+\\d+\\/\\d+\\s\\-\\s\\d+\\/\\d+)"
+    },
+    "NumTrab": {
+        "Literal": "(Número de trabajadores confirmados:)",
+        "ExpR": "(\\s+\\d+)"
+    },
+    "Fecha": {
+        "Literal": "(Fecha:)",
+        "ExpR": "(\\s+\\d+\\-\\d+\\-\\d+)"
+    },
+    "LiqContCom": {
+        "Literal": "(LIQUIDO CONTINGENCIAS COMUNES\\s+)",
+        "ExpR": "(\\-?\\d+\\.\\d+\\,\\d+|\\-?\\d+\\,\\d+)"
+    },
+    "LiqAccTrab": {
+        "Literal": "(LIQUIDO DE ACCIDENTES DE TRABAJO\\s+)",
+        "ExpR": "(\\-?\\d+\\.\\d+\\,\\d+|\\-?\\d+\\,\\d+)"
+    },
+    "LiqOtrasCot": {
+        "Literal": "(LIQUIDO DE OTRAS COTIZACIONES\\s+)",
+        "ExpR": "(\\-?\\d+\\.\\d+\\,\\d+|\\-?\\d+\\,\\d+)"
+    },
+    "LiqTotales": {
+        "Literal": "(LIQUIDO DE TOTALES\\s+)",
+        "ExpR": "(\\-?\\d+\\.\\d+\\,\\d+|\\-?\\d+\\,\\d+)"
+    },
+    "CalifLiq": {
+        "Literal": "(Calificador de Liquidación:)",
+        "ExpR": "(\\s+L\\d+\\s)(.+)(En)"
+    }
+}
