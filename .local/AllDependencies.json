@@ -2168,9 +2168,9 @@
     "restore": {
       "projectUniqueName": "PDFParser",
       "projectName": "PDFParser",
-      "projectPath": "C:\\Users\\pablo\\OneDrive\\Escritorio\\Audicon_Process\\.local",
+      "projectPath": "C:\\Users\\pablo\\OneDrive\\Escritorio\\Audicon_FixedProcess\\.local",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\OneDrive\\Escritorio\\Audicon_Process\\.local"
+      "outputPath": "C:\\Users\\pablo\\OneDrive\\Escritorio\\Audicon_FixedProcess\\.local"
     },
     "frameworks": {
       "net461": {
