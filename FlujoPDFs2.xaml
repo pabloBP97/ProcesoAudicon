@@ -88,7 +88,6 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="FlujoPDFs" sap:VirtualizedContainerService.HintSize="711,944" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -140,26 +139,26 @@
               <av:Size x:Key="ShapeSize">200,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If Condition="[numeroDeFicheros.Count&gt;0]" sap:VirtualizedContainerService.HintSize="1099,5632" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[numeroDeFicheros.Count&gt;0]" sap:VirtualizedContainerService.HintSize="1099,7639" sap2010:WorkflowViewState.IdRef="If_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="720,5484" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence sap:VirtualizedContainerService.HintSize="720,7491" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Fichero in Carpeta" sap:VirtualizedContainerService.HintSize="678,5043" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[numeroDeFicheros]">
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Fichero in Carpeta" sap:VirtualizedContainerService.HintSize="678,7050" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[numeroDeFicheros]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:String">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:String" Name="file" />
                       </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="642,4909" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence sap:VirtualizedContainerService.HintSize="642,6916" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Int32" Name="numPags" />
                           <Variable x:TypeArguments="x:String" Name="text" />
@@ -169,7 +168,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,4817" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600,6824" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Name="contador" />
                           </Sequence.Variables>
@@ -189,9 +188,9 @@
                           </Assign>
                           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="558,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;PDF &quot; + file]" />
                           <upap:GetPDFPageCount DisplayName="Get PDF Page Count" FileName="[file]" sap:VirtualizedContainerService.HintSize="558,59" sap2010:WorkflowViewState.IdRef="GetPDFPageCount_2" PageCount="[numPags]" />
-                          <ui:InterruptibleDoWhile Condition="[contador &lt; numPags]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="558,4395" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                          <ui:InterruptibleDoWhile Condition="[contador &lt; numPags]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="558,6402" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                             <ui:InterruptibleDoWhile.Body>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,6568" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="522,6237" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="RazonSocial" />
                                   <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="RazSocMatch" />
@@ -232,7 +231,7 @@
                                 <ui:Matches BuilderPattern="(Liquido de accidentes de trabajo)(\d+\.\d+\,\d+|\d+\,\d+)" DisplayName="Accidentes de trabajo" sap:VirtualizedContainerService.HintSize="480,59" sap2010:WorkflowViewState.IdRef="Matches_20" Input="[text]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Avanzado&quot;,&quot;OperationValue&quot;:&quot;(Liquido de accidentes de trabajo)(\\d+\\.\\d+\\,\\d+|\\d+\\,\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactamente&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[JObject.Parse(diccExpresiones(&quot;LiqAccTrab&quot;).ToString)(&quot;Literal&quot;).ToString + JObject.Parse(diccExpresiones(&quot;LiqAccTrab&quot;).ToString)(&quot;ExpR&quot;).ToString]" RegexOption="None" Result="[AccidentesTrabMatch]" />
                                 <ui:Matches BuilderPattern="(Liquido de otras cotizaciones)(\d+\.\d+\,\d+|\d+\,\d+)" DisplayName="Otras cotizaciones" sap:VirtualizedContainerService.HintSize="480,59" sap2010:WorkflowViewState.IdRef="Matches_21" Input="[text]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Avanzado&quot;,&quot;OperationValue&quot;:&quot;(Liquido de otras cotizaciones)(\\d+\\.\\d+\\,\\d+|\\d+\\,\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactamente&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[JObject.Parse(diccExpresiones(&quot;LiqOtrasCot&quot;).ToString)(&quot;Literal&quot;).ToString + JObject.Parse(diccExpresiones(&quot;LiqOtrasCot&quot;).ToString)(&quot;ExpR&quot;).ToString]" RegexOption="None" Result="[OtrasCotMatch]" />
                                 <ui:Matches BuilderPattern="(Liquido de totales)(\d+\.\d+\,\d+|\d+\,\d+)" DisplayName="Liquido de totales" sap:VirtualizedContainerService.HintSize="480,59" sap2010:WorkflowViewState.IdRef="Matches_22" Input="[text]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Avanzado&quot;,&quot;OperationValue&quot;:&quot;(Liquido de totales)(\\d+\\.\\d+\\,\\d+|\\d+\\,\\d+)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactamente&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="[JObject.Parse(diccExpresiones(&quot;LiqTotales&quot;).ToString)(&quot;Literal&quot;).ToString + JObject.Parse(diccExpresiones(&quot;LiqTotales&quot;).ToString)(&quot;ExpR&quot;).ToString]" RegexOption="None" Result="[LiqTotal]" />
-                                <Sequence DisplayName="Asignación de valores" sap:VirtualizedContainerService.HintSize="480,5011" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                <Sequence DisplayName="Asignación de valores" sap:VirtualizedContainerService.HintSize="480,4680" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -365,7 +364,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="376,280" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -414,7 +413,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="376,280" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -434,7 +433,7 @@
                                       </Catch>
                                     </TryCatch.Catches>
                                   </TryCatch>
-                                  <TryCatch DisplayName="Fecha" sap:VirtualizedContainerService.HintSize="438,514" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                  <TryCatch DisplayName="Fecha" sap:VirtualizedContainerService.HintSize="438,183" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -452,10 +451,10 @@
                                       </Assign>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,352" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
@@ -524,7 +523,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[CalificadorLiquidacion]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">["No capturado o no existente: revisar doc. " + file + " , pág " + contador.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
@@ -573,7 +572,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[LiquidoContingenciasComunes]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">["No capturado o no existente: revisar doc. " + file + " , pág " + contador.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
@@ -622,7 +621,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[LiquidoAccidentesTrabajo]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">["No capturado o no existente: revisar doc. " + file + " , pág " + contador.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
@@ -671,7 +670,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[LiquidoOtrasCotizaciones]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">["No capturado o no existente: revisar doc. " + file + " , pág " + contador.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
@@ -720,7 +719,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[LiquidoTotales]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">["No capturado o no existente: revisar doc. " + file + " , pág " + contador.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">0</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                           </Sequence>
